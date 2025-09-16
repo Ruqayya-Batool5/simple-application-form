@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>APPLICATION FORM</h2>
+
+    <form action="#done" method="get" enctype="multipart/form-data">
+      <!-- Name -->
+      <label>Name</label>
+      <input type="text" placeholder="First Name" name="fname" required>
+      <input type="text" placeholder="Last Name" name="lname" required>
+
+      <!-- Email -->
+      <label>Email</label>
+      <input type="email"
+             placeholder="example@gmail.com"
+             name="email"
+             required
+             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]"
+             title="Enter a valid email like name@example.com">
+
+      <!-- Date of Birth -->
+      <label>Date of Birth</label>
+      <input type="date"
+             name="dob"
+             required
+             min="1900-01-01"
+             max="2025-12-31">
+
+      <!-- Gender -->
+      <label>Gender:</label>
+      <div class="gender">
+        <!-- one radio has required to make the group required -->
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+
+      <!-- Address -->
+      <label>Permanent Address</label>
+      <input type="text" placeholder="Perm. Addr" name="addr" required>
+
+      <!-- Temp Address is optional -->
+      <label>Temp Address</label>
+      <input type="text" placeholder="Temp Addr (Opt)" name="tempaddr">
+
+      <!-- Position -->
+      <label>Position</label>
+      <select name="position" required>
+        <option value="">--Select--</option>
+        <option>Content Creator</option>
+        <option>Web Developer</option>
+        <option>Designer</option>
+        <option>Other</option>
+      </select>
+
+      <!-- File -->
+      <label>Attach File (Image or PDF):</label>
+      <input type="file"
+             name="file"
+             required
+             accept=".jpeg,.jpg,.png,.pdf"
+             title="Only files with following formats can be uploaded : .jpeg, .png, .pdf">
+
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Hidden success message -->
+    <p id="done" class="success-text">
+      Your form is successfully submitted!
+    </p>
+  </div>
+
+</body>
+</html>

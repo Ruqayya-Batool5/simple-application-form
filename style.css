@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8eeee;
+}
+
+.form-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fcddef;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.gender label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: rgb(241, 47, 138);
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background: rgb(216, 24, 130);
+  color: white;
+}
+
+.success-text {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+  font-size: 1.1rem;
+}
+
+:target.success-text {
+  display: block;
+}
